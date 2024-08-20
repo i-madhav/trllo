@@ -1,7 +1,12 @@
+import { auth } from "@clerk/nextjs/server"
+
 const OrganizationIdPage = () => {
+    const {userId , orgId} = auth();
     return(
-        <div>
+        <div className="mt-28">
             OrganisationPageMadhav
+            user id - {userId}
+            org - {orgId}
         </div>
     )
 }
