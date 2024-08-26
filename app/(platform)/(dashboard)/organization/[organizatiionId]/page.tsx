@@ -5,8 +5,6 @@ const OrganizationIdPage = () => {
     return(
         <div className="">
             OrganisationPageMadhav
-            user id - {userId}
-            org - {orgId}
         </div>
     )
 }
