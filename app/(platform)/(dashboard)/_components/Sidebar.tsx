@@ -11,12 +11,14 @@ import { NavItem, Organization } from "./NavItem";
 
 interface SidebarProps {
   // used to keep track of what was open and what was not open in the side bar!!
-  storageKey?: string;
+  storageKey?:string
 }
 
 const Sidebar = ({ storageKey = "t-sidebar-state" }: SidebarProps) => {
   // this useSate is going to keep track of which sidebar , is expanded and which is not !
-  /*so record means that we are going to accept a object in our useSate*/
+  /*so record means that we are going to accept a object in our useSate
+    storageKey: This is a string that identifies the key under which the state will be stored in localStorage. By using a dynamic key (passed as a prop), the component can store different states for different instances or contexts. For example, if you have multiple sidebars in your application, each with its own storageKey, each sidebar can independently manage and persist its state.
+  */
   const [expanded, setExpanded] = useLocalStorage<Record<string, any>>(
     storageKey,
     {}
