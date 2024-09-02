@@ -1,7 +1,7 @@
 import { create } from "zustand";
 
 type MobileSidebarStore = {
-    isOpen: Boolean;
+    isOpen: boolean;
     onOpen: () => void;
     onClose: () => void;
 }
