@@ -57,6 +57,7 @@ export const NavItem = ({
   const onClick = (href: string) => {
     routers.push(href);
   };
+  
   return (
     <AccordionItem value={organization?.id} className="border-none">
       <AccordionTrigger
